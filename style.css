@@ -32,3 +32,25 @@ body {
   padding: 10px;
   border: 1px solid #aaaaaa;
 }
+
+
+
+
+
+[data-draggable="target"]{
+	width:42%;
+  margin:0 0.5em 0.5em 0;
+	padding:0.5em;
+	border:2px solid #888;
+	background:#ddd;
+	}
+
+
+.songs{
+	display:block;
+	list-style-type:none;
+	margin:0 0 2px 0;
+	padding:0.2em 0.4em;
+	border-radius:0.2em;
+	line-height:1.3;
+}
