@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MP3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+  <button id="songs">Songs</button>
+  <button id="import">Import</button>
+  <div id="container-songs">
+    <select name="select" id="list">
+      <option class="hide">Sort By</option>
+      <option value="artist">Artist</option>
+      <option value="song name">Song name</option>
+      <option value="year">Year</option>
+      <option value="started">Started</option>
+      <option value="album">Album</option>
+    </select>
+    <button id="delete">Delete</button>
+    <button id="import">Import</button>
+    <input type="search">
+
+    
+    <div class="cuadroBlanco"></div>
+  </div>
+
+  
+  <div id="container-import">
+    <p class="import__tittle">Import songs</p>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+    <label for="artist">Artist</label>
+    <input type="text" name="artist" id="artist">
+    <label for="year">Year</label>
+    <input type="text" name="year" id="year">
+    <label for="album">Album</label>
+    <input type="text" name="album" id="album">
+    <label for="img">Image</label>
+    <input type="text" name="img" id="img">
+    <p>Sources</p>
+    <label for="mp3">mp3</label>
+    <input type="text" name="mp3" id="mp3">
+    <label for="wav">wav</label>
+    <input type="text" name="wav" id="wav">
+    <label for="ogg">ogg</label>
+    <input type="text" name="ogg" id="ogg">
+    <button id="reset">Reset</button>
+    <button id="save">Save</button>
+  </div>
+
+  <div class="player">
+    <audio src="" controls id="player"></audio>
+    <h2 id="song-name"></h2> 
+    <h3 id="artist"></h3>
+    <h3 id="description"></h3>
+    <h3 id="year"></h3>
+    <button id="anterior" ><img src="img/siguiente.png" alt="" class="button"></button>
+    <button id="siguiente" ><img src="img/siguiente.png" alt="" class="button"></button>
+  </div>
+  
+
+
+  <!-- drag and drop -->
+
+
+
+  
+
+  
+  
+<!-- <p>Drag the W3Schools image into the rectangle:</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<img id="drag1" src="img/anterior.png" draggable="true" ondragstart="drag(event)" width="336" height="69"> -->
+
+  <script src="js/main.js"></script>
+  <script src="js/drag.js"></script>
+</body>
+</html>
