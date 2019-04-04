@@ -8,22 +8,24 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
-<body>
-  <button id="songs">Songs</button>
-  <button id="import">Import</button>
+  <div class="container-bottons">
+    <button id="songs" class="bottons">Songs</button>
+    <button id="import" class="bottons">Import</button>
+  </div>
   <div id="container-songs">
-    <select name="select" id="list">
-      <option class="hide">Sort By</option>
-      <option value="artist">Artist</option>
-      <option value="song name">Song name</option>
-      <option value="year">Year</option>
-      <option value="started">Started</option>
-      <option value="album">Album</option>
-    </select>
-    <button id="delete">Delete</button>
-    <button id="import">Import</button>
-    <input type="search">
-
+    <div class="song-bottons">
+      <select name="select" id="list">
+        <option class="hide">Sort By</option>
+        <option value="artist">Artist</option>
+        <option value="song name">Song name</option>
+        <option value="year">Year</option>
+        <option value="started">Started</option>
+        <option value="album">Album</option>
+      </select>
+      <button id="delete" class="buttons-change">Delete</button>
+      <button id="import" class="buttons-change">Import</button>
+      <input type="search" >
+  </div>
     <div data-draggable="target">
       <ul>
         <li class="songs">Item 0</li>
@@ -32,12 +34,12 @@
         <li class="songs">Item 3</li>
       </ul>
     </div> 
-    <div> 
+    <div data-draggable="target"> 
       <ul>
-        <li data-draggable="target"></li>
+        
       </ul>
     </div>
-    <div class="cuadroBlanco"></div>
+
   </div>
 
   
