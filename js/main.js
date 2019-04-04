@@ -15,7 +15,8 @@ let songs = [
   { cancion: '1.mp3',
   title: 'So will i ',
   artist: 'Hillsong UNITED',
-  descrption: 'Songs for god'
+  descrption: 'Songs for god',
+  imagen : 'img/hillsong.png'
   },
     
   {
@@ -25,7 +26,8 @@ let songs = [
   },
 ];
 
-
+// contenedor de player 
+let 
 
 
 

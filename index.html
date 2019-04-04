@@ -24,7 +24,19 @@
     <button id="import">Import</button>
     <input type="search">
 
-    
+    <div data-draggable="target">
+      <ul>
+        <li class="songs">Item 0</li>
+        <li class="songs">Item 1</li>
+        <li class="songs">Item 2</li>
+        <li class="songs">Item 3</li>
+      </ul>
+    </div> 
+    <div> 
+      <ul>
+        <li data-draggable="target"></li>
+      </ul>
+    </div>
     <div class="cuadroBlanco"></div>
   </div>
 
@@ -53,30 +65,22 @@
   </div>
 
   <div class="player">
-    <audio src="" controls id="player"></audio>
+    <img src="img/hill.png" alt="" class="imagen">
+    <div class="audio">
+      <audio src="" controls id="player"></audio>
+    </div>
+ 
+    <img src="img/atras.png" alt=""  id="anterior" class="button">
+    <img src="img/siguiente.png" alt="" id="siguiente"  class="button">
     <h2 id="song-name"></h2> 
     <h3 id="artist"></h3>
     <h3 id="description"></h3>
     <h3 id="year"></h3>
-    <button id="anterior" ><img src="img/siguiente.png" alt="" class="button"></button>
-    <button id="siguiente" ><img src="img/siguiente.png" alt="" class="button"></button>
   </div>
 
 
   
-  <div data-draggable="target">
-    <ul>
-      <li class="songs">Item 0</li>
-      <li class="songs">Item 1</li>
-      <li class="songs">Item 2</li>
-      <li class="songs">Item 3</li>
-    </ul>
-  </div> 
-  <div> 
-    <ul>
-      <li data-draggable="target"></li>
-    </ul>
-  </div>
+  
   <script src="js/main.js"></script>
   <script src="js/drag.js"></script>
 </body>
