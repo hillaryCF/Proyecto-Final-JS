@@ -27,7 +27,6 @@ let songs = [
 ];
 
 // contenedor de player 
-let 
 
 
 

@@ -1,7 +1,7 @@
-(function()
-{
-  var items = document.querySelectorAll('.songs')
-  for (len = items.length, i = 0; i < len; i ++) {
+(function() {
+	var items = document.querySelectorAll('.songs');
+	
+  for (let i = 0;i < items.length; i ++) {
 		items[i].setAttribute('draggable', 'true');
 	}
   
@@ -20,7 +20,7 @@
 
 
 	document.addEventListener('drop', function(e) {
-		if(e.target.getAttribute('data-draggable') == 'target') {
+		if(e.target.getAttribute('class') == 'lista') {
 			e.target.appendChild(item);
 			e.preventDefault();
 		}
