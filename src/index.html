@@ -5,16 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MP3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
-  <div class="container-bottons">
+  <div class="container-bottons clearfix">
+    <div class="container-bottons ">
     <button id="songs" class="bottons">Songs</button>
     <button id="import" class="bottons">Import</button>
   </div>
 
-  <div id="container-songs">
+  <div id="container-songs" class="clearfix">
     <div class="song-bottons">
       <select name="select" id="list">
         <option class="hide">Sort By</option>
@@ -24,27 +25,27 @@
         <option value="started">Started</option>
         <option value="album">Album</option>
       </select>
-      <button id="delete" class="buttons-change">Delete</button>
-      <button id="import" class="buttons-change">Import</button>
-      <input type="search" >
+        <button id="delete" class="buttons-change">Delete</button>
+        <button id="import" class="buttons-change">Import</button>
+        <input type="search" id="search" placeholder="Search....">
   </div>
-  
-    <div data-draggable="target">
+
+    <div data-draggable="target" class="clearfix">
       <ul class="lista">
-        <li class="hola">HILLSONG<audio src="" class="hola"></audio></li>
-        <li class="hola">HILLSONG1<audio src="" class="hola"></audio></li>
-        <li class="hola">HILLSONG2<audio src="" class="hola"></audio></li>
+        <li class="hola">Hillsong - The Lord Prayer<audio src="" class="hola"></audio></li>
+        <li class="hola">Hillsong - So Will I<audio src="" class="hola"></audio></li>
+        <li class="hola">Hillsong - Jesus I Need You<audio src="" class="hola"></audio></li>
       </ul>
-    </div> 
-    <div data-draggable="target"> 
+    </div>
+    <div data-draggable="target" class="clearfix">
       <ul class="lista">
-        
+
       </ul>
     </div>
 
   </div>
 
-  
+
   <div id="container-import">
     <p class="import__tittle">Import songs</p>
     <label for="name">Name</label>
@@ -64,21 +65,21 @@
     <input type="text" name="wav" id="wav">
     <label for="ogg">ogg</label>
     <input type="text" name="ogg" id="ogg">
-    <button id="reset">Reset</button>
-    <button id="save">Save</button>
+    <button id="reset" class="buttons-change">Reset</button>
+    <button id="save" class="buttons-change">Save</button>
   </div>
 
   <div class="player">
-      <h2 id="song-name"></h2> 
-      <h3 id="artist"></h3>
-      <h3 id="description"></h3>
-      <h3 id="year"></h3>
+    <h2 id="song-name">Cancion nombre</h2>
+    <h3 id="artist">Artista</h3>
+    <h3 id="description">Descripcion</h3>
+    <h3 id="year">Año</h3>
     <img src="img/hillsonnew.png" alt="" class="imagen">
     <div class="audio">
+      <img src="img/atras.png" alt=""  id="anterior" class="button">
       <audio src="" controls id="player"></audio>
+      <img src="img/siguiente.png" alt="" id="siguiente"  class="button">
     </div>
-    <img src="img/atras.png" alt=""  id="anterior" class="button">
-    <img src="img/siguiente.png" alt="" id="siguiente"  class="button">
   </div>
 
   <script src="js/main.js"></script>

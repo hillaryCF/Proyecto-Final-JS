@@ -17,21 +17,21 @@ const second = document.getElementsByClassName('hola').src = 'music/2.mp3';
 const third = document.getElementsByClassName('hola').src = 'music/3.mp3';
 
 let songs = [{
-  title: '1',
+  title: 'The Lord Prayer',
   artist: 'Hillsong UNITED',
   descrption: 'Songs for god',
   cancion: first
 },
 
 {
-  title: '2',
+  title: 'So Will I',
   artist: 'Hillsong UNITED',
   descrption: 'Songs for god',
   cancion: second
 },
 
 {
-  title: '3',
+  title: 'Jesus I Need You',
   artist: 'Hillsong Worship',
   descrption: 'Songs for god',
   cancion: third

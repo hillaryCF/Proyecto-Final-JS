@@ -1,0 +1,143 @@
+button {
+  border: 0; }
+
+.button {
+  margin-left: 6%;
+  margin-bottom: 95px; }
+
+.button + .button {
+  margin-left: 92%; }
+
+.songs {
+  display: block;
+  list-style-type: none;
+  margin: 0 0 2px 0;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  line-height: 1.3; }
+
+.bottons {
+  border: 0;
+  width: 115px;
+  height: 43px;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #6B78D8; }
+
+.bottons:hover {
+  background: #949494;
+  color: black; }
+
+.bottons + .bottons {
+  border-left: 1px solid; }
+
+.buttons-change {
+  cursor: pointer;
+  background: #2a2a2a;
+  color: white;
+  text-transform: uppercase;
+  background: #2C3DBA;
+  border: none;
+  width: 115px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.buttons-change:hover {
+  background: #949494; }
+
+#search {
+  padding: 8px 28px;
+  border: 0; }
+
+#list {
+  width: 115px;
+  height: 30px;
+  color: white;
+  text-transform: uppercase;
+  background: #2C3DBA;
+  border: none; }
+
+#anterior, #siguiente {
+  width: 1%;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  position: absolute; }
+
+#anterior {
+  left: 150px; }
+
+#siguiente {
+  right: 300px; }
+
+#container-import {
+  display: none; }
+
+.audio {
+  background: linear-gradient(to right, black, #2b3dba, #6b78d8);
+  padding: 20px;
+  text-align: center; }
+
+.container-bottons {
+  text-align: center;
+  padding-top: 15px; }
+
+.song-bottons {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 40px; }
+
+.player {
+  margin-top: 100px; }
+
+#container-songs {
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+#container-import {
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+.imagen {
+  width: 100%;
+  opacity: 0.8; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: black; }
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both; }
+
+[data-draggable="target"] {
+  width: 49%;
+  background: #949494;
+  float: left;
+  height: 147px;
+  color: white;
+  margin-left: 13px; }
+
+[data-draggable="target"] + [data-draggable="target"] {
+  border-left: 1px solid black; }
+
+.lista {
+  height: 100px;
+  list-style: none; }
+
+h3, h2 {
+  color: white; }
+
+label {
+  color: white; }
+
+label + input {
+  margin-right: 22px;
+  margin-left: 3px; }
+
+/*# sourceMappingURL=style.css.map */

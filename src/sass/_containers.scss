@@ -1,0 +1,33 @@
+#container-import {
+  display: none;
+}
+
+.audio {
+  background: linear-gradient(to right,black, #2b3dba, #6b78d8);
+  padding: 20px;
+  text-align: center;
+}
+
+.container-bottons {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.song-bottons {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+.player {
+  margin-top: 100px;
+}
+
+#container-songs {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#container-import {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

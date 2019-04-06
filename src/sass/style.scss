@@ -1,0 +1,43 @@
+@import'buttons';
+@import'containers';
+@import'img';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: black;
+}
+.clearfix::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+[data-draggable="target"]{
+	width:49%;
+  background:#949494;
+  float: left;
+  height: 147px;
+  color: white;
+  margin-left: 13px;
+}
+
+[data-draggable="target"] + [data-draggable="target"]{
+  border-left: 1px solid black;
+}
+
+.lista {
+  height: 100px;
+  list-style: none;
+}
+
+h3,h2 {
+  color: white;
+}
+label {
+  color: white;
+}
+label + input {
+  margin-right: 22px;
+  margin-left: 3px;
+}
+
