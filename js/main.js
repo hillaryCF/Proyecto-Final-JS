@@ -10,42 +10,42 @@ button_songs.addEventListener('click',(action_songs)=>{
   container_import.style.display='none';
   container_songs.style.display = 'block';
 });
-
+const first = document.getElementsByClassName('hola').src = 'music/1.mp3';
+const second = document.getElementsByClassName('hola').src = 'music/2.mp3';
+const third = document.getElementsByClassName('hola').src = 'music/3.mp3';
 let songs = [
   { 
-  title: 'The lord´s Prayer',
+  title: '1',
   artist: 'Hillsong UNITED',
   descrption: 'Songs for god',
-  cancion: '../music/hillsong.mp3'
+  cancion: first
   },
     
   {
-    title: 'Jesus I Need You',
+    title: '2',
     artist: 'Hillsong UNITED',
     descrption: 'Songs for god',
-    cancion: '../music/hillsong1.mp3'
+    cancion: second
   },
   {
-    title: 'So Will I',
+    title: '3',
     artist: 'Hillsong Worship',
     descrption: 'Songs for god',
-    cancion: '../music/hillsong2.mp3'
+    cancion: third
   },
 ];
 
-// contenedor de player 
-
-// variables
 
 let audio = document.getElementById('player')
 let nombre = document.getElementById('artist');
 let songName = document.getElementById('song-name');
 
-let next = document.getElementById('siguiente');
-let previous = document.getElementById('anterior');
+let nextbutton = document.getElementById('siguiente');
+let previousbutton = document.getElementById('anterior');
 let i = 0;
-next.addEventListener('click', siguiente);
-function siguiente() {
+let e = i;
+nextbutton.addEventListener('click', next);
+function next() {
   if (i > songs.length - 1) i = 0;
   audio.src = songs[i].cancion;
   let texto =document.createTextNode(songs[i].artist);
@@ -53,9 +53,21 @@ function siguiente() {
   let songText = document.createTextNode(songs[i].title);
   songName.appendChild(songText)
   i++;
-  console.log();
+
 }
-siguiente();
+next();
+
+previousbutton.addEventListener('click', previous);
+function previous() {
+  if (i > songs.length) i--; ;
+  audio.src = songs[e].cancion;
+  // let texto =document.createTextNode(songs[e].artist);
+  // nombre.appendChild(texto);
+  // let songText = document.createTextNode(songs[e].title);
+  // songName.appendChild(songText)
+
+}
+previous();
 
 
 

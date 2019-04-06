@@ -1,6 +1,5 @@
 (function() {
-	var items = document.querySelectorAll('.songs');
-	
+	var items = document.querySelectorAll('.hola');
   for (let i = 0;i < items.length; i ++) {
 		items[i].setAttribute('draggable', 'true');
 	}
@@ -30,4 +29,7 @@
 	document.addEventListener('dragend', function(e) {
 		item = null;
 	}, false);
+
 })();	
+
+
