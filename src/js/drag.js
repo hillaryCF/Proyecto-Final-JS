@@ -10,13 +10,11 @@
 		e.dataTransfer.setData('text', '');
 	}, false);
 
-	
 	document.addEventListener('dragover', function(e) {
 		if(item) {
 			e.preventDefault();
 		}
 	}, false);	
-
 
 	document.addEventListener('drop', function(e) {
 		if(e.target.getAttribute('class') == 'lista') {
@@ -25,7 +23,6 @@
 		}
 	}, false);
 	
-
 	document.addEventListener('dragend', function(e) {
 		item = null;
 	}, false);
