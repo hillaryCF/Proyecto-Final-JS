@@ -1,0 +1,2 @@
+// botones siguiente y anterior
+
