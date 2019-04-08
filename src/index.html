@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  
 </head>
 
   <div class="container-bottons clearfix">
@@ -32,13 +33,14 @@
 
     <div data-draggable="target" class="clearfix">
       <ul class="lista">
-        <li class="song-list" data-index="0"id="name-first" ></li>
-        <li class="song-list" data-index="1"id="name-second" ></li>
-        <li class="song-list" data-index="2"id="name-third"></li>
+        <li class="song-list" data-index="0"id="name-first" ><span id="start">&#9734</span></li>
+        <li class="song-list" data-index="1"id="name-second" ><span id="start2">&#9734</span></li>
+        <li class="song-list" data-index="2"id="name-third"><span id="start3">&#9734</span></li>
       </ul>
     </div>
     <div data-draggable="target" class="clearfix">
-      <ul class="lista" id="list-player"></ul>
+      <ul class="lista" id="list-player">
+      </ul>
     </div>
   </div>
 
@@ -73,7 +75,7 @@
     <img src="img/hillsonnew.png" alt="" class="imagen">
     <div class="audio">
       <img src="img/atras.png" alt=""  id="anterior" class="button">
-      <audio src="" controls id="player"></audio>
+      <audio src="" controls id="player" autoplay></audio>
       <img src="img/siguiente.png" alt="" id="siguiente"  class="button">
     </div>
   </div>

@@ -1,11 +1,12 @@
-(function() {
+(function() {	
+	var items = document.querySelectorAll('.song-list');
 	let name_song = document.getElementById('song-name');
 	let artist_song = document.getElementById('artista-name');
 	let album_song = document.getElementById('album-name');
 	let year_song = document.getElementById('year-album');
 	let song = document.getElementById('player');
-	var items = document.querySelectorAll('.song-list');
-  for (let i = 0; i < items.length; i ++) {
+	
+	for (let i = 0; i < items.length; i ++) {
 		items[i].setAttribute('draggable', 'true');
 	}
 	
@@ -30,17 +31,15 @@
 			year_song.innerText=songs[i].year;
 			album_song.innerText=songs[i].album;
 			name_song.innerText=songs[i].name;
-			let nuevacancion = song.src = songs[i].cancion;
-		}
+			song.src = songs[i].cancion;
+			}
+			
+		
 	}, false);
 	
 	document.addEventListener('dragend', function(e) {
 		item = null;
 	}, false);
-	
-	let nu =[];
-	nu.push
-
 })();	
 
 

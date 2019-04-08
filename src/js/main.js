@@ -7,9 +7,9 @@ let songName = document.getElementById('song-name');
 let description = document.getElementById('description');
 let year = document.getElementById('year');
 
-const first = document.getElementsByClassName('.hola').src = 'music/1.mp3';
-const second = document.getElementsByClassName('.hola').src = 'music/2.mp3';
-const third = document.getElementsByClassName('.hola').src = 'music/3.mp3';
+const first = document.getElementsByClassName('.song-list').src = 'music/1.mp3';
+const second = document.getElementsByClassName('.song-list').src = 'music/2.mp3';
+const third = document.getElementsByClassName('.song-list').src = 'music/3.mp3';
 
 let songs = [{
   name: 'Hillsong - The Lord Prayer',
@@ -66,18 +66,6 @@ button_songs.addEventListener('click', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // function hola () {
 //   let persona =  {
 //     nombre : "juan",
@@ -89,7 +77,7 @@ button_songs.addEventListener('click', () => {
 //   localStorage.setItem("persona", JSON.stringify(persona));
 // }
 // let hi = ["capintero","licenciaddo"];
-// let nombre = "kalua";
+// let nombre = "gilberth";
 // hola();
 
 // let local = localStorage.getItem("nombre");

@@ -141,3 +141,6 @@ label + input {
   margin-left: 3px; }
 
 /*# sourceMappingURL=style.css.map */
+.estrella:active {
+  background: red;
+}
