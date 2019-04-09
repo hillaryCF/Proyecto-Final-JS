@@ -64,8 +64,9 @@ const TodoData = (function () {
 
     save() {
       let data = JSON.stringify(songs.map(i => i));
-      console.log(data);
+      
       localStorage.setItem(PREFIX, data);
+      console.log(data);
     }
 
     restore() {
@@ -86,3 +87,27 @@ function gh() {
   let a = new TodoData().save();
   console.log(a);
 }
+
+
+// function hola () {
+//   let persona =  {
+//     nombre : "juan",
+//     edad : 21,
+//     profesion : "doctor",
+//     pais : "peru"
+//   }
+//   localStorage.setItem("profesion", hi[1]);
+//   localStorage.setItem("persona", JSON.stringify(persona));
+// }
+// let hi = ["capintero","licenciaddo"];
+// let nombre = "gilberth";
+// hola();
+
+// let local = localStorage.getItem("nombre");
+// console.log(local);
+
+// let locale = JSON.parse(localStorage.getItem("persona"));
+// console.log(locale);
+
+
+

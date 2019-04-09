@@ -32,11 +32,12 @@
 			album_song.innerText=songs[i].album;
 			name_song.innerText=songs[i].name;
 			song.src = songs[i].cancion;
-			}
+			delet.style.display = 'inline-block';
+		}
 
 
 	}, false);
-
+	
 	document.addEventListener('dragend', function(e) {
 		item = null;
 	}, false);

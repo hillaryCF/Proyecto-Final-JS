@@ -6,6 +6,8 @@ let audio = document.getElementById('player');
 let songName = document.getElementById('song-name');
 let description = document.getElementById('description');
 let year = document.getElementById('year');
+let delet = document.getElementById('delete');
+delet.style.display = 'none';
 
 const first = document.getElementsByClassName('.song-list').src = 'music/1.mp3';
 const second = document.getElementsByClassName('.song-list').src = 'music/2.mp3';
@@ -19,7 +21,6 @@ let songs = [{
   cancion: first,
   image:'img/hllsongnew.png'
 },
-
 {
   name: 'Hillsong - So Will I',
   artist: 'Hillsong UNITED',
@@ -28,7 +29,6 @@ let songs = [{
   cancion: second,
   image:'img/hllsongnew.png'
 },
-
 {
   name: 'Hillsong - Jesus I Need You',
   artist: 'Hillsong Worship',
@@ -39,54 +39,27 @@ let songs = [{
 },
 ];
 
+function createLis(array) {
+  const ul = document.getElementById('list-available');
+  ul.innerHTML = '';
+  array.forEach((obj, i) => {
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    span.innerText = '☆';
+    li.className = 'song-list';
+    li.setAttribute('data-index', i);
+    li.setAttribute('draggable', 'true');
+    li.innerHTML += obj.name;
+    li.appendChild(span);
+    ul.appendChild(li);
+  });
+}
+createLis(songs);
 
-// lista nombre
-// let firs_name_list = document.getElementById('name-first');
-// let second_name_list = document.getElementById('name-second');
-// let third_name_list = document.getElementById('name-third');
+// let listacancion = document.getElementById('list-player');
+delet.addEventListener('click',btn_delet);
 
-// let firs_text_list =  document.createTextNode(songs[0].name);
-// let second_text_list =  document.createTextNode(songs[1].name);
-// let third_text_list =  document.createTextNode(songs[2].name);
-
-// firs_name_list.appendChild(firs_text_list);
-// second_name_list.appendChild(second_text_list);
-// third_name_list.appendChild(third_text_list);
-
-let nextbutton = document.getElementById('siguiente');
-let previousbutton = document.getElementById('anterior');
-
-button_import.addEventListener('click', () => {
-  container_songs.style.display = 'none';
-  container_import.style.display = 'inline';
-});
-button_songs.addEventListener('click', () => {
-  container_import.style.display = 'none';
-  container_songs.style.display = 'block';
-});
-
-
-// function hola () {
-//   let persona =  {
-//     nombre : "juan",
-//     edad : 21,
-//     profesion : "doctor",
-//     pais : "peru"
-//   }
-//   localStorage.setItem("profesion", hi[1]);
-//   localStorage.setItem("persona", JSON.stringify(persona));
-// }
-// let hi = ["capintero","licenciaddo"];
-// let nombre = "gilberth";
-// hola();
-
-// let local = localStorage.getItem("nombre");
-// console.log(local);
-
-// let locale = JSON.parse(localStorage.getItem("persona"));
-// console.log(locale);
-
-
-
-
-
+function btn_delet() {
+  let cancinnueva = document.querySelectorAll('#list-player li')[0];  
+  cancinnueva.parentNode.removeChild(cancinnueva);
+}
