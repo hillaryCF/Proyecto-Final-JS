@@ -25,7 +25,18 @@
         <option value="started">Started</option>
         <option value="album">Album</option>
       </select>
-        <button id="delete" class="buttons-change">Delete</button>
+        <button id = "delete" class="buttons-change" data-scope="modal-1">Delete</button>
+        <div class="modal-1">
+          <div class="modal-content">
+            <h3>Delete song</h3>
+            <p>Are you sure you want to remove this song?</p>
+            <p>This action will delete the song named: </p>
+            <p>The song will be removed on all the playlist</p>
+            <button id="definitive-delete" class="buttons-change">Delete the song</button>
+            <button class="modal-close buttons-change" >Cancel</button>
+          </div>
+          <div class="modal-close modal-close-icon"></div>
+        </div>
         <button id="import" class="buttons-change">Edit</button>
         <input type="search" id="search" placeholder="Search....">
   </div>
@@ -40,26 +51,36 @@
   </div>
 
   <div id="container-import">
+    <form id="form">
     <p class="import__tittle">Import songs</p>
     <label for="name">Name</label>
-    <input type="text" name="name" id="name">
+    <input type="text" id="name" name="name"  value="">
+
     <label for="artist">Artist</label>
     <input type="text" name="artist" id="artist">
+
     <label for="year">Year</label>
     <input type="text" name="year" id="year">
+
     <label for="album">Album</label>
     <input type="text" name="album" id="album">
+
     <label for="img">Image</label>
     <input type="text" name="img" id="img">
+
     <p>Sources</p>
     <label for="mp3">mp3</label>
     <input type="text" name="mp3" id="mp3">
+
     <label for="wav">wav</label>
     <input type="text" name="wav" id="wav">
+
     <label for="ogg">ogg</label>
     <input type="text" name="ogg" id="ogg">
+
     <button id="reset" class="buttons-change">Reset</button>
-    <button id="save" class="buttons-change">Save</button>
+    <button type="submit" id="save" class="buttons-change">Saveee</button>
+    </form>
   </div>
 
   <div class="player">
@@ -75,7 +96,11 @@
     </div>
   </div>
 
-  
+
+
+
+
+
   <script src="js/main.js"></script>
   <script src="js/localStorage.js"></script>
   <script src="js/player.js"></script>
