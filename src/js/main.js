@@ -40,18 +40,18 @@ let songs = [{
 ];
 
 
-// lista nombre 
-let firs_name_list = document.getElementById('name-first');
-let second_name_list = document.getElementById('name-second');
-let third_name_list = document.getElementById('name-third');
+// lista nombre
+// let firs_name_list = document.getElementById('name-first');
+// let second_name_list = document.getElementById('name-second');
+// let third_name_list = document.getElementById('name-third');
 
-let firs_text_list =  document.createTextNode(songs[0].name);
-let second_text_list =  document.createTextNode(songs[1].name);
-let third_text_list =  document.createTextNode(songs[2].name);
+// let firs_text_list =  document.createTextNode(songs[0].name);
+// let second_text_list =  document.createTextNode(songs[1].name);
+// let third_text_list =  document.createTextNode(songs[2].name);
 
-firs_name_list.appendChild(firs_text_list);
-second_name_list.appendChild(second_text_list);
-third_name_list.appendChild(third_text_list);
+// firs_name_list.appendChild(firs_text_list);
+// second_name_list.appendChild(second_text_list);
+// third_name_list.appendChild(third_text_list);
 
 let nextbutton = document.getElementById('siguiente');
 let previousbutton = document.getElementById('anterior');

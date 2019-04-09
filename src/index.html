@@ -7,10 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  
-</head>
 
-  <div class="container-bottons clearfix">
+</head>
+  <div class="container-bottons ">
     <div class="container-bottons ">
     <button id="songs" class="bottons">Songs</button>
     <button id="import" class="bottons">Import</button>
@@ -27,16 +26,12 @@
         <option value="album">Album</option>
       </select>
         <button id="delete" class="buttons-change">Delete</button>
-        <button id="import" class="buttons-change">Import</button>
+        <button id="import" class="buttons-change">Edit</button>
         <input type="search" id="search" placeholder="Search....">
   </div>
 
     <div data-draggable="target" class="clearfix">
-      <ul class="lista">
-        <li class="song-list" data-index="0"id="name-first" ><span id="start">&#9734</span></li>
-        <li class="song-list" data-index="1"id="name-second" ><span id="start2">&#9734</span></li>
-        <li class="song-list" data-index="2"id="name-third"><span id="start3">&#9734</span></li>
-      </ul>
+      <ul class="lista" id="list-available">
     </div>
     <div data-draggable="target" class="clearfix">
       <ul class="lista" id="list-player">
@@ -83,5 +78,6 @@
   <script src="js/main.js"></script>
   <script src="js/player.js"></script>
   <script src="js/drag.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
