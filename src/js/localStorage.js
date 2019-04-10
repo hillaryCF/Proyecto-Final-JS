@@ -61,7 +61,7 @@ const  pintarDB = () => {
     songsLocal = [];
   }else {
     songsLocal.forEach(element => {
-			lii.innerText= songsLocal.name;
+			lii.innerText= songsLocal[7].name;
     })
   }
 }
