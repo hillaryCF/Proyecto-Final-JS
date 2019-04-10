@@ -1,5 +1,5 @@
-(function() {
-	var items = document.querySelectorAll('.song-list');
+(function () {
+	let items = document.querySelectorAll('.song-list');
 	let name_song = document.getElementById('song-name');
 	let artist_song = document.getElementById('artista-name');
 	let album_song = document.getElementById('album-name');
@@ -36,14 +36,9 @@
       img.src = songs[i].image;
 			delet.style.display = 'inline-block';
 		}
-
-
-	}, false);
+  }, false);
 
 	document.addEventListener('dragend', function(e) {
 		item = null;
 	}, false);
-})();
-
-
-
+}());

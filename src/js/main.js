@@ -57,8 +57,6 @@ function createLis(array) {
 }
 createLis(songs);
 
-
-
 class Modal {
 	constructor (selector) {
 	this.selector = selector;
@@ -125,6 +123,7 @@ class Modal {
 		}
 	}
 }
+
 (() => {
 	const modal1 = new Modal(".modal-1");
 })();
