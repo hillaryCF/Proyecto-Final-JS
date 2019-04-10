@@ -3,7 +3,8 @@
 	let name_song = document.getElementById('song-name');
 	let artist_song = document.getElementById('artista-name');
 	let album_song = document.getElementById('album-name');
-	let year_song = document.getElementById('year-album');
+  let year_song = document.getElementById('year-album');
+  let img = document.getElementById('imagen');
 	let song = document.getElementById('player');
 
 	for (let i = 0; i < items.length; i ++) {
@@ -31,13 +32,14 @@
 			year_song.innerText=songs[i].year;
 			album_song.innerText=songs[i].album;
 			name_song.innerText=songs[i].name;
-			song.src = songs[i].cancion;
+      song.src = songs[i].cancion;
+      img.src = songs[i].image;
 			delet.style.display = 'inline-block';
 		}
 
 
 	}, false);
-	
+
 	document.addEventListener('dragend', function(e) {
 		item = null;
 	}, false);

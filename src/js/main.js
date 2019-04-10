@@ -20,7 +20,7 @@ let songs = [{
   year: '2012',
   album: 'wonder',
   cancion: first,
-  image:'img/hllsongnew.png'
+  image:'img/1.png'
 },
 {
   name: 'Hillsong - So Will I',
@@ -28,7 +28,7 @@ let songs = [{
   year: '2012',
   album: 'wonder',
   cancion: second,
-  image:'img/hllsongnew.png'
+  image:'img/2.png'
 },
 {
   name: 'Hillsong - Jesus I Need You',
@@ -36,12 +36,12 @@ let songs = [{
   year: '2012',
   album: 'wonder',
   cancion: third,
-  image:'img/hllsongnew.png'
+  image:'img/3.png'
 },
 ];
 
+const ul = document.getElementById('list-available');
 function createLis(array) {
-  const ul = document.getElementById('list-available');
   ul.innerHTML = '';
   array.forEach((obj, i) => {
     const li = document.createElement('li');
