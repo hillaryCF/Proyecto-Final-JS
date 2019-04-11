@@ -1,13 +1,14 @@
 const formulario = document.querySelector('#form');
 formulario.addEventListener('submit', agregonueva);
-const crearItem = (name, artist, year, album, img, mp3, wav, ogg) => {
+
+const crearItem = (name, artist, year, album, cancion,img,  wav, ogg) => {
   let item = {
     name: name ,
     artist: artist,
     year: year,
     album: album,
+    cancion: cancion,
     img: img,
-    mp3: mp3,
     wav: wav,
     ogg: ogg
   }
@@ -15,8 +16,6 @@ const crearItem = (name, artist, year, album, img, mp3, wav, ogg) => {
   return(item);
 }
 
-
-// funciones
 const guardarLocalStorage = () => {
   localStorage.setItem('TODO', JSON.stringify(songsLocal));
 };
@@ -32,7 +31,7 @@ const  infInHtml= () => {
     })
   }
 };
-// console.log(songsLocal);
+
 function agregonueva (e) {
   e.preventDefault();
   const name = document.getElementById('name').value;

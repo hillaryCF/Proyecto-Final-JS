@@ -11,36 +11,35 @@ let delet = document.getElementById('delete');
 delet.style.display = 'none';
 
 const first = document.getElementsByClassName('.song-list').src = 'music/1.mp3';
-const second = document.getElementsByClassName('.song-list').src = 'music/2.mp3';
-const third = document.getElementsByClassName('.song-list').src = 'music/3.mp3';
+const second = document.getElementsByClassName('.song-list').src = 'music/3.mp3';
+const third = document.getElementsByClassName('.song-list').src = 'music/2.mp3';
 
-// const songs = [{
-//   name: 'Hillsong - The Lord Prayer',
-//   artist: 'Hillsong UNITED',
-//   year: '2012',
-//   album: 'wonder',
-//   cancion: first,
-//   image: 'img/1.png',
-// },
-// {
-//   name: 'Hillsong - So Will I',
-//   artist: 'Hillsong UNITED',
-//   year: '2012',
-//   album: 'wonder',
-//   cancion: second,
-//   image: 'img/2.png',
-// },
-// {
-//   name: 'Hillsong - Jesus I Need You',
-//   artist: 'Hillsong Worship',
-//   year: '2012',
-//   album: 'wonder',
-//   cancion: third,
-//   image: 'img/3.png',
-// },
-// ];
+const songs = [{
+  name: 'Hillsong - The Lord Prayer',
+  artist: 'Hillsong UNITED',
+  year: '2012',
+  album: 'wonder',
+  cancion: first,
+  image: 'img/1.png',
+},
+{
+  name: 'Hillsong - So Will I',
+  artist: 'Hillsong UNITED',
+  year: '2012',
+  album: 'wonder',
+  cancion: second,
+  image: 'img/2.png',
+},
+{
+  name: 'Hillsong - Jesus I Need You',
+  artist: 'Hillsong Worship',
+  year: '2012',
+  album: 'wonder',
+  cancion: third,
+  image: 'img/3.png',
+},
+];
 
-// array nuevo de canciones 
 let songsLocal = [{
   name: 'Hillsong - The Lord Prayer',
   artist: 'Hillsong UNITED',
@@ -50,24 +49,22 @@ let songsLocal = [{
   image:'img/1.png'
 },
 {
-  name: 'Hillsong - So Will I',
+  name: 'Hillsong -  Jesus I Need You',
   artist: 'Hillsong UNITED',
   year: '2012',
   album: 'wonder',
-  cancion: second,
+  cancion: third,
   image:'img/2.png'
 },
 {
-  name: 'Hillsong - Jesus I Need You',
+  name: 'Hillsong - So Will I',
   artist: 'Hillsong Worship',
   year: '2012',
   album: 'wonder',
-  cancion: third,
+  cancion: second ,
   image:'img/3.png'
 },
 ];
-
-
 
 const ul = document.getElementById('list-available');
 function createLis(array) {
@@ -86,8 +83,6 @@ function createLis(array) {
   });
 }
 createLis(songsLocal);
-
-
 
 class Modal {
 	constructor (selector) {
@@ -131,8 +126,7 @@ class Modal {
 
 			if (scopeModal.includes(scope)) {
 				let id = this.generateId();
-
-				this.appendUniqueModalId(modal, id);
+        this.appendUniqueModalId(modal, id);
 				this.appendUniqueButtonId(item, id);
       }
 		});
@@ -160,3 +154,10 @@ class Modal {
 (() => {
 	const modal1 = new Modal(".modal-1");
 })();
+
+let edit = document.getElementById('importt');
+edit.style.display ='none';
+edit.addEventListener('click', editList);
+function editList() {
+  
+}

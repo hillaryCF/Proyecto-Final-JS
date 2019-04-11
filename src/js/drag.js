@@ -1,3 +1,4 @@
+	let song = document.getElementById('player');
 (function () {
 	let items = document.querySelectorAll('.song-list');
 	let name_song = document.getElementById('song-name');
@@ -5,7 +6,7 @@
 	let album_song = document.getElementById('album-name');
   let year_song = document.getElementById('year-album');
   let img = document.getElementById('imagen');
-	let song = document.getElementById('player');
+
 
 	for (let i = 0; i < items.length; i ++) {
 		items[i].setAttribute('draggable', 'true');
@@ -32,10 +33,11 @@
 			year_song.innerText=songsLocal[i].year;
 			album_song.innerText=songsLocal[i].album;
 			name_song.innerText=songsLocal[i].name;
-      song.src = songsLocal[i].cancion;
+			song.src = songsLocal[i].cancion;
+			// song.src = songsLocal[i].mp3;
       img.src = songsLocal[i].image;
-      delet.style.display = 'inline-block';
-      
+			delet.style.display = 'inline-block';
+			edit.style.display ='inline-block';
 		}
   }, false);
 
