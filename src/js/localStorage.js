@@ -44,27 +44,28 @@ const crearItem = (name, artist, year, album, img, mp3, wav, ogg) => {
 
   const lii = document.createElement('li');
   const spann = document.createElement('span');
-  // spann.innerText = '☆';
+  spann.innerText = '☆';
+  lii.appendChild(spann);
   lii.className = 'song-list';
   lii.setAttribute('draggable', 'true');
-  lii.appendChild(spann);
+
   ul.appendChild(lii);
 
 // funciones
 const guardarDB = () => {
   localStorage.setItem('TODO', JSON.stringify(songsLocal));
-}
+};
 
 const  pintarDB = () => {
   songsLocal = JSON.parse(localStorage.getItem('TODO'));
   if (songsLocal === null) {
     songsLocal = [];
-  }else for (let i = 0; i ++;) {
+  }else  {
     songsLocal.forEach(element => {
-			lii.innerText = songsLocal[i].name;
+			lii.innerText = songsLocal[4].name;
     })
   }
-}
+};
 // console.log(songsLocal);
 function agregonueva (e) {
   e.preventDefault();
