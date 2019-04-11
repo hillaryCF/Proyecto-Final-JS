@@ -52,17 +52,18 @@ const crearItem = (name, artist, year, album, img, mp3, wav, ogg) => {
   ul.appendChild(lii);
 
 // funciones
-const guardarDB = () => {
+const guardarLocalStorage = () => {
   localStorage.setItem('TODO', JSON.stringify(songsLocal));
 };
 
-const  pintarDB = () => {
+const  infInHtml= () => {
   songsLocal = JSON.parse(localStorage.getItem('TODO'));
   if (songsLocal === null) {
     songsLocal = [];
   }else  {
+    for (let i = 0; i < items.length; i ++)
     songsLocal.forEach(element => {
-			lii.innerText = songsLocal[4].name;
+			lii.innerText = songsLocal[0].name;
     })
   }
 };
@@ -79,7 +80,7 @@ function agregonueva (e) {
   const oggimport = document.getElementById('ogg').value;
 
   crearItem(name,artist,year,album,imgimport,mp3import,wavimport,oggimport);
-  guardarDB();
+  guardarLocalStorage();
 }
 
-document.addEventListener('DOMContentLoaded', pintarDB);
+document.addEventListener('DOMContentLoaded', infInHtml);

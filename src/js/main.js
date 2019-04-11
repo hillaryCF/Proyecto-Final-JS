@@ -14,13 +14,13 @@ const first = document.getElementsByClassName('.song-list').src = 'music/1.mp3';
 const second = document.getElementsByClassName('.song-list').src = 'music/2.mp3';
 const third = document.getElementsByClassName('.song-list').src = 'music/3.mp3';
 
-let songs = [{
+const songs = [{
   name: 'Hillsong - The Lord Prayer',
   artist: 'Hillsong UNITED',
   year: '2012',
   album: 'wonder',
   cancion: first,
-  image:'img/1.png'
+  image: 'img/1.png',
 },
 {
   name: 'Hillsong - So Will I',
@@ -28,7 +28,7 @@ let songs = [{
   year: '2012',
   album: 'wonder',
   cancion: second,
-  image:'img/2.png'
+  image: 'img/2.png',
 },
 {
   name: 'Hillsong - Jesus I Need You',
@@ -36,7 +36,7 @@ let songs = [{
   year: '2012',
   album: 'wonder',
   cancion: third,
-  image:'img/3.png'
+  image: 'img/3.png',
 },
 ];
 
@@ -61,9 +61,8 @@ class Modal {
 	constructor (selector) {
 	this.selector = selector;
   this.init();
-}
-
-	init() {
+  }
+  init() {
 		this.close(this.create());
 	}
 
@@ -73,19 +72,22 @@ class Modal {
 		let modalScope = document.querySelector(`[data-scope-modal-id="${modalId}"]`);
     let bton_delete = document.getElementById('definitive-delete');
 
-		close.addEventListener("click", () => {
-			selector.style.display = "none";
-		});
+    close.addEventListener("click", btnClose);
+    function btnClose () {
+      selector.style.display = "none";
+  }
 
-    bton_delete.addEventListener("click", () => {
+    bton_delete.addEventListener("click", deleteBN);
+    function deleteBN () {
       let cancinnueva = document.querySelectorAll('#list-player li')[0];
       cancinnueva.parentNode.removeChild(cancinnueva);
       selector.style.display = 'none';
-		});
+    }
 
-		modalScope.addEventListener("click", () => {
+    modalScope.addEventListener("click", modalAparece);
+    function modalAparece () {
       selector.style.display = "block";
-		});
+    }
 	}
 
 	create() {
@@ -123,7 +125,6 @@ class Modal {
 		}
 	}
 }
-
 (() => {
 	const modal1 = new Modal(".modal-1");
 })();

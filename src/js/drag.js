@@ -34,7 +34,8 @@
 			name_song.innerText=songs[i].name;
       song.src = songs[i].cancion;
       img.src = songs[i].image;
-			delet.style.display = 'inline-block';
+      delet.style.display = 'inline-block';
+      
 		}
   }, false);
 
