@@ -28,12 +28,12 @@
 			e.target.appendChild(item);
 			e.preventDefault();
 			let i = item.getAttribute('data-index');
-			artist_song.innerText= songs[i].artist;
-			year_song.innerText=songs[i].year;
-			album_song.innerText=songs[i].album;
-			name_song.innerText=songs[i].name;
-      song.src = songs[i].cancion;
-      img.src = songs[i].image;
+			artist_song.innerText= songsLocal[i].artist;
+			year_song.innerText=songsLocal[i].year;
+			album_song.innerText=songsLocal[i].album;
+			name_song.innerText=songsLocal[i].name;
+      song.src = songsLocal[i].cancion;
+      img.src = songsLocal[i].image;
       delet.style.display = 'inline-block';
       
 		}

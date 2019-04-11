@@ -1,32 +1,5 @@
-
 const formulario = document.querySelector('#form');
 formulario.addEventListener('submit', agregonueva);
-let songsLocal = [{
-  name: 'Hillsong - The Lord Prayer',
-  artist: 'Hillsong UNITED',
-  year: '2012',
-  album: 'wonder',
-  cancion: first,
-  image:'img/1.png'
-},
-{
-  name: 'Hillsong - So Will I',
-  artist: 'Hillsong UNITED',
-  year: '2012',
-  album: 'wonder',
-  cancion: second,
-  image:'img/2.png'
-},
-{
-  name: 'Hillsong - Jesus I Need You',
-  artist: 'Hillsong Worship',
-  year: '2012',
-  album: 'wonder',
-  cancion: third,
-  image:'img/3.png'
-},
-];
-
 const crearItem = (name, artist, year, album, img, mp3, wav, ogg) => {
   let item = {
     name: name ,
@@ -42,14 +15,6 @@ const crearItem = (name, artist, year, album, img, mp3, wav, ogg) => {
   return(item);
 }
 
-  const lii = document.createElement('li');
-  const spann = document.createElement('span');
-  spann.innerText = '☆';
-  lii.appendChild(spann);
-  lii.className = 'song-list';
-  lii.setAttribute('draggable', 'true');
-
-  ul.appendChild(lii);
 
 // funciones
 const guardarLocalStorage = () => {
@@ -61,9 +26,9 @@ const  infInHtml= () => {
   if (songsLocal === null) {
     songsLocal = [];
   }else  {
-    for (let i = 0; i < items.length; i ++)
+    
     songsLocal.forEach(element => {
-			lii.innerText = songsLocal[0].name;
+			createLis(songsLocal);
     })
   }
 };

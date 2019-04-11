@@ -14,13 +14,40 @@ const first = document.getElementsByClassName('.song-list').src = 'music/1.mp3';
 const second = document.getElementsByClassName('.song-list').src = 'music/2.mp3';
 const third = document.getElementsByClassName('.song-list').src = 'music/3.mp3';
 
-const songs = [{
+// const songs = [{
+//   name: 'Hillsong - The Lord Prayer',
+//   artist: 'Hillsong UNITED',
+//   year: '2012',
+//   album: 'wonder',
+//   cancion: first,
+//   image: 'img/1.png',
+// },
+// {
+//   name: 'Hillsong - So Will I',
+//   artist: 'Hillsong UNITED',
+//   year: '2012',
+//   album: 'wonder',
+//   cancion: second,
+//   image: 'img/2.png',
+// },
+// {
+//   name: 'Hillsong - Jesus I Need You',
+//   artist: 'Hillsong Worship',
+//   year: '2012',
+//   album: 'wonder',
+//   cancion: third,
+//   image: 'img/3.png',
+// },
+// ];
+
+// array nuevo de canciones 
+let songsLocal = [{
   name: 'Hillsong - The Lord Prayer',
   artist: 'Hillsong UNITED',
   year: '2012',
   album: 'wonder',
   cancion: first,
-  image: 'img/1.png',
+  image:'img/1.png'
 },
 {
   name: 'Hillsong - So Will I',
@@ -28,7 +55,7 @@ const songs = [{
   year: '2012',
   album: 'wonder',
   cancion: second,
-  image: 'img/2.png',
+  image:'img/2.png'
 },
 {
   name: 'Hillsong - Jesus I Need You',
@@ -36,9 +63,11 @@ const songs = [{
   year: '2012',
   album: 'wonder',
   cancion: third,
-  image: 'img/3.png',
+  image:'img/3.png'
 },
 ];
+
+
 
 const ul = document.getElementById('list-available');
 function createLis(array) {
@@ -53,9 +82,12 @@ function createLis(array) {
     li.innerHTML += obj.name;
     li.appendChild(span);
     ul.appendChild(li);
+    
   });
 }
-createLis(songs);
+createLis(songsLocal);
+
+
 
 class Modal {
 	constructor (selector) {
